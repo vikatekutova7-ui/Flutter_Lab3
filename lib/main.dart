@@ -5,7 +5,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(), // Используем вынесенный виджет
+        body: GradientContainer(),
       ),
     ),
   );
