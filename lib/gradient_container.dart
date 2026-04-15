@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab3_app/styled_text.dart';
 
 const startAlignment = Alignment.topCenter;
 const endAlignment = Alignment.bottomCenter;
@@ -10,6 +9,10 @@ class GradientContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
   final Color color3;
+
+  void rollDice() {
+    // Здесь будет логика броска кубика
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +29,25 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/imager/dice-1.png',
-          width: 300,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/images/dice-1.png',
+              width: 300,
+            ),
+            const SizedBox(height: 20),
+            TextButton(
+              onPressed: rollDice,
+              child: const Text(
+                'Roll Dice',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
